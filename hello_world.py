@@ -1,16 +1,16 @@
-"""Implement Changes:
-Add comments to each part of the code for better readability.
-Replace the .format method with an f-string for clarity and improved performance.
-"""
+# Add a method to validate that the age input is numeric
 
-# Ask the user for their name
+# Function to validate age input
+def get_user_age(prompt):
+    while True:
+        age = input(prompt)
+        if age.isdigit():
+            return age
+        else:
+            print("Please enter a valid age.")
+
 user_name = input("What is your name? ")
+user_age = get_user_age("Tell me your age, please: ")
 
-# Ask the user for their age
-user_age = input("Tell me your age, please: ")
-
-# Display the collected information
 print(f"Your name is {user_name} and you are {user_age} years old.")
-
-# Greet the world
 print("Hello World!")
