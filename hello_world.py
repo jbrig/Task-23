@@ -1,10 +1,16 @@
+# Add a method to validate that the age input is numeric
 
-# First I defined the first variable to ask as user_name and using input to request this information
-#Then I defined the second variables to ask as user age and using input to request this information
-# In order to print the requested information, I wrote a phrase between brackets to give it a grammatical sense to the requested information
-#In this phrase, I used the F string format where I included both previous defined variables
-# Finally, I printed the last phrase.
-user_name = input("What is your name ?") 
-user_age = input("Tell me your age, please")
-print("Your name is {} and you are {} old".format (user_name, user_age))
-print("Hello World !")
+# Function to validate age input
+def get_user_age(prompt):
+    while True:
+        age = input(prompt)
+        if age.isdigit():
+            return age
+        else:
+            print("Please enter a valid age.")
+
+user_name = input("What is your name? ")
+user_age = get_user_age("Tell me your age, please: ")
+
+print(f"Your name is {user_name} and you are {user_age} years old.")
+print("Hello World!")
